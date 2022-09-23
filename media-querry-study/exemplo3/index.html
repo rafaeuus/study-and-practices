@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Exemplo 1</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Logo</h1>
+      <button>Abrir Menu</button>
+      <ul>
+        <li>Início</li>
+        <li>Sobre</li>
+        <li>Serviços</li>
+        <li>Contatos</li>
+      </ul>
+    </nav>
+    <script>
+      const buttonTexts = ["Abrir", "Fechar"];
+      const buttonToggle = document.querySelector("nav button");
+      buttonToggle.addEventListener("click", () => {
+        let toggleMenu = document
+          .querySelector("nav ul")
+          .classList.toggle("show-menu-mobile");
+        if (toggleMenu) {
+          buttonToggle.innerText = `${buttonTexts[1]} Menu`;
+        } else {
+          buttonToggle.innerText = `${buttonTexts[0]} Menu`;
+        }
+      });
+    </script>
+  </body>
+</html>
